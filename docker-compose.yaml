@@ -1,0 +1,27 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
+    ports:
+      - "4242:4242"
+    working_dir: /app/backend
+    volumes:
+      - ./backend:/app/backend
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+
+  frontend:
+    depends_on:
+      - backend
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
+    ports:
+      - "5300:5300"
+    working_dir: /app/frontend
+    volumes:
+      - ./frontend:/app/frontend
+    environment:
+      CHOKIDAR_USEPOLLING: "true"

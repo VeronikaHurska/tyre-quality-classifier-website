@@ -1,0 +1,6 @@
+fastapi
+tensorflow
+uvicorn==0.23.2
+opencv-python==4.8.1.78
+pillow
+python-multipart
