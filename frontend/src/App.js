@@ -5,12 +5,12 @@ import './App.css';
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [prediction, setPrediction] = useState(null);
-  const [imageUrl, setImageUrl] = useState(null); // Added state to store the image URL
+  const [imageUrl, setImageUrl] = useState(null); 
   const fileInputRef = useRef(null);
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
-    setImageUrl(URL.createObjectURL(event.target.files[0])); // Create a URL for the selected image
+    setImageUrl(URL.createObjectURL(event.target.files[0])); 
   };
 
   const handleUpload = async () => {
@@ -60,7 +60,7 @@ function App() {
 
 
 
-        {imageUrl && <img src={imageUrl} alt="Selected" width="300" />}
+        {imageUrl && <img src={imageUrl} alt="Selected" />}
 
         {prediction && (
           <div>

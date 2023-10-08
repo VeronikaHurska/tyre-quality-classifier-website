@@ -4,6 +4,8 @@
   background-image: url('tyre-industry.jpg');
   background-size: auto;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
