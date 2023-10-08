@@ -31,8 +31,6 @@ Before you begin, ensure you have the following dependencies installed on your s
 
 ## Note
 
-- The frontend is a React application, and it's set up for development mode. To create a production build, use `npm run build`.
-
 - Some warnings and messages related to package dependencies and TensorFlow optimizations may appear in the logs. These are informational and should not impact the functionality of the application.
 
 - Ensure that you have a reliable internet connection to download any required Docker images and dependencies during the setup process.
