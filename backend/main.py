@@ -34,6 +34,9 @@ def read_file_as_image(bytes) -> np.array:
 @app.post('/predict')
 async def predict(file: UploadFile = File()):
 
+    
+    print(file)
+    
     image = read_file_as_image(await file.read())
     resized_image = cv2.resize(image, (256, 256))
 
